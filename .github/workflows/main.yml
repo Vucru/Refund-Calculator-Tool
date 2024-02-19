@@ -24,4 +24,4 @@ jobs:
       run: npm ci
 
     - name: Build App
-      run: npm run dist
+      run: npm run build
