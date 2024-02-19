@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Refund Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <form id="refundForm">
+            <h2>Refund Calculator</h2>
+            <fieldset>
+                <div>
+                    <label for="originalPrice">Original Price</label>
+                    <input type="text" id="originalPrice" pattern="^\d+(\.\d{1,2})?$" required>
+                </div>
+                <div>
+                    <label for="taxRate">Tax Rate (%)</label>
+                    <input type="text" id="taxRate" pattern="^\d+(\.\d{1,2})?$" required>
+                </div>
+                <div>
+                    <label for="originalDiscountRate">Original Discount Rate (%)</label>
+                    <select id="originalDiscountRate" required>
+                        <option value="20" selected>20%</option>
+                        <option value="22">22%</option>
+                        <option value="25">25%</option>
+                        <option value="27">27%</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="newDiscountRate">New Discount Rate (%)</label>
+                    <select id="newDiscountRate" required>
+                        <option value="20">20%</option>
+                        <option value="22">22%</option>
+                        <option value="25" selected>25%</option>
+                        <option value="27">27%</option>
+                    </select>
+                </div>
+            </fieldset>
+            <button type="submit">Calculate Refund</button>
+            <button type="button" id="resetButton">Reset</button>
+        </form>
+        <div id="resultBox" class="result-box">Refund Amount: $0.00</div>
+        <div id="errorBox" class="error-box" style="display: none;"></div>
+        <div id="loadingBox" class="loading-box" style="display: none;">Calculating...</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

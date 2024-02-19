@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333; /* Darker background for contrast */
+    color: #f5f5f5; /* Light text for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ensures content is centered vertically and horizontally */
+    height: 100vh;
+    margin: 0;
+    padding: 0; /* Minimized padding for full viewport usage */
+    font-size: 12px; /* Smaller base font size for compactness */
+}
+
+.container {
+    width: 70%; /* Reduced width for a tighter layout */
+    max-width: 320px; /* Decreased max-width for better form focus */
+    background-color: #444; /* Slightly lighter shade for container distinction */
+    padding: 15px; /* Optimized padding for spacing inside container */
+    border-radius: 5px; /* Smoother border-radius for modern look */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Softened box-shadow for subtlety */
+    box-sizing: border-box; /* Ensures padding does not add to the width */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Stacks form elements vertically */
+}
+
+form div {
+    margin-bottom: 5px; /* Tightened spacing between form elements */
+}
+
+form label {
+    display: block;
+    margin-bottom: 2px; /* Reduced space below label for compactness */
+    font-size: 12px; /* Smaller font size for labels */
+}
+
+form input, form select {
+    width: 100%;
+    padding: 5px; /* Reduced padding for elements */
+    border: 1px solid #ddd; /* Subtle border color */
+    background-color: #eee; /* Light background for input and select */
+    border-radius: 3px; /* Less rounded borders for a sharper look */
+    color: #333; /* Dark text for contrast */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+    font-size: 12px; /* Smaller font size for inputs */
+}
+
+form input:focus, form select:focus {
+    border-color: #4CAF50; /* Green border on focus for visibility */
+    outline: none; /* Removes the default focus outline */
+}
+
+form button {
+    padding: 7px; /* Adjusted padding for button */
+    border: none;
+    border-radius: 3px; /* Consistent border-radius with inputs */
+    margin-top: 8px; /* Adjusted top margin for spacing */
+    cursor: pointer; /* Cursor changes to pointer to indicate clickable */
+    font-weight: bold;
+    text-transform: uppercase; /* Stylistic choice for button text */
+    letter-spacing: 0.5px; /* Slightly spaced lettering */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+    font-size: 12px; /* Consistent font size with inputs */
+}
+
+form button[type="submit"], form button[type="button"] {
+    background-color: #4CAF50; /* Standard button background */
+    color: white; /* Text color for buttons */
+}
+
+form button[type="button"] {
+    background-color: #f44336; /* Distinct background for alternate action button */
+}
+
+form button:hover {
+    opacity: 0.85; /* Slight opacity change on hover for feedback */
+}
+
+.result-box, .error-box, .loading-box {
+    margin-top: 10px;
+    padding: 7px; /* Consistent padding with buttons */
+    border-radius: 3px; /* Consistent border-radius */
+    font-weight: bold;
+    box-sizing: border-box;
+    font-size: 12px; /* Smaller font size for consistency */
+}
+
+.result-box {
+    background-color: #4CAF50; /* Success color */
+}
+
+.error-box {
+    background-color: #f44336; /* Error color */
+}
+
+.loading-box {
+    background-color: #FFEB3B; /* Loading state color */
+    color: black; /* Text color for readability */
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 85%; /* Slightly wider for very small screens */
+    }
+
+    form input, form select, form button {
+        padding: 4px; /* Reduced padding for smaller screens */
+        font-size: 11px; /* Further reduced font size for consistency */
+    }
+}

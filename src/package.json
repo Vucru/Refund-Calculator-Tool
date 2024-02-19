@@ -1,0 +1,33 @@
+{
+  "name": "refund-calculator-app",
+  "version": "1.0.0",
+  "description": "A simple refund calculator app built with Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.refund-calculator-app",
+    "mac": {
+      "category": "public.app-category.finance",
+      "target": "dmg"
+    },
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "keywords": [
+    "electron",
+    "refund",
+    "calculator"
+  ],
+  "author": "Douglas Meador",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^28.2.3",
+    "electron-builder": "^24.9.1",
+    "electron-packager": "^15.3.0"
+  }
+}
