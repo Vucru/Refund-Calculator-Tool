@@ -25,6 +25,8 @@ jobs:
 
     - name: Build App
       run: npm run build
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
     - name: List contents of dist directory
       run: ls dist/
