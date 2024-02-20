@@ -6,8 +6,5 @@ node_modules/
 # Ignore all log files
 *.log
 
-# Ignore package-lock.json to avoid conflicts
-package-lock.json
-
 # Ignore dist directory
 dist/
