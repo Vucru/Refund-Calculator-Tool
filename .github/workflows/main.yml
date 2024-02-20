@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
@@ -18,13 +18,16 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v2
       with:
-        node-version: '20'
+        node-version: 14
+
+    - name: Change to src directory
+      run: cd src
 
     - name: Install Dependencies
-      run: npm install
+      run: npm ci
 
     - name: Build App
-      run: npm run build --verbose
+      run: npm run build
 
     - name: List contents of dist directory
       run: ls dist/
