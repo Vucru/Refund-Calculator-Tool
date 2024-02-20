@@ -6,5 +6,5 @@ node_modules/
 # Ignore all log files
 *.log
 
-# Ignore dist directory
+# Ignore dist directory for the built files
 dist/
