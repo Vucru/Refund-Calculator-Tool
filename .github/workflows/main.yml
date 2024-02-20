@@ -22,18 +22,15 @@ jobs:
 
     - name: Install Dependencies
       run: npm ci
-      working-directory: src
 
     - name: Build App
       run: npm run build
-      working-directory: src
 
     - name: List contents of dist directory
       run: ls dist/
-      working-directory: src
 
     - name: Upload Artifacts
       uses: actions/upload-artifact@v2
       with:
         name: ${{ matrix.os }}
-        path: src/dist/
+        path: dist/
